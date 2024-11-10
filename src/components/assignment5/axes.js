@@ -18,6 +18,7 @@ function YAxis(props) {
                 <g key={tickValue} transform={`translate(0, ${yScale(tickValue)})`}>
                     {/* Tick line */}
                     <line x1={-5} x2={0} y1={yScale.bandwidth() / 2} y2={yScale.bandwidth() / 2} stroke="black" />
+                    <line x1={0} y1={0} x2={0} y2={yScale.bandwidth()} stroke="black" />
                     {/* Tick label */}
                     <text
                         style={{ textAnchor: "start", fontSize: "10px" }}
