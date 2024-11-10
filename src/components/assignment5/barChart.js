@@ -8,8 +8,8 @@ export function BarChart({ offsetX, offsetY, data, height, width, selectedAirlin
   const maxCount = Math.max(...data.map((d) => d.Count));
 
   const xScale = scaleLinear()
-    .domain([0, maxCount])
-    .range([0, width - 60]);
+    .domain([0, maxCount + 20])
+    .range([0, width-60]);
 
   const yScale = scaleBand()
     .domain(data.map((d) => d.AirlineName))
@@ -45,6 +45,7 @@ export function BarChart({ offsetX, offsetY, data, height, width, selectedAirlin
             width={xScale(d.Count)}
             height={yScale.bandwidth()}
             fill={color(d.AirlineID)}
+            stroke = "black"
             onMouseOver={() => onMouseOver(d.AirlineID)}
             onMouseOut={onMouseOut}
           />

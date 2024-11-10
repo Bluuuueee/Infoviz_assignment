@@ -18,7 +18,7 @@ function YAxis(props) {
                 <g key={tickValue} transform={`translate(0, ${yScale(tickValue)})`}>
                     {/* Tick line */}
                     <line x1={-5} x2={0} y1={yScale.bandwidth() / 2} y2={yScale.bandwidth() / 2} stroke="black" />
-                    <line x1={0} y1={0} x2={0} y2={yScale.bandwidth()} stroke="black" />
+                    <line x1={0} y1={0} x2={0} y2={yScale.bandwidth()+5} stroke="black" />
                     {/* Tick label */}
                     <text
                         style={{ textAnchor: "start", fontSize: "10px" }}
@@ -43,9 +43,9 @@ function XAxis(props) {
         {<line x2={width} stroke='black'/>}
         {xScale.ticks(5).map(tickValue => 
             <g key={tickValue} transform={`translate(${xScale(tickValue)}, ${0})`}>
-                <line y1={335} y2={340} stroke='black' />
+                <line y1={340} y2={345} stroke='black' />
                 <line x1={0} y1={340} x2={30} y2={340} stroke='black' />
-                <text style={{ textAnchor:'end', fontSize:'10px' }} x={5} y={350}>
+                <text style={{ textAnchor:'end', fontSize:'10px' }} x={5} y={355}>
                     {tickValue}
                 </text>
             </g>
