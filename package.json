@@ -11,6 +11,7 @@
   "dependencies": {
     "bootstrap": "^5.3.2",
     "d3": "^7.8.5",
+    "infovis-assignments": "file:",
     "next": "^14.2.17",
     "react": "^18",
     "react-bootstrap": "^2.10.0",
